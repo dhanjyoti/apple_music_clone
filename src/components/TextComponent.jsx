@@ -4,7 +4,7 @@ const TextComponent = ({icon, text}) => {
     return (
         <div className="component">
             <div>{icon}</div>
-            <div>{text}</div>
+            <div style={{color:"black"}}>{text}</div>
         </div>
     )
 }

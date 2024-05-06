@@ -1,0 +1,19 @@
+.leftSidebarContainer{
+    /* border: 2px solid red; */
+    min-width: 260px;
+    /* width: 19vw;    */
+    /* height: 100vh;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebarContainer{
+    margin: 25px;
+}
+
+.iconDiv{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

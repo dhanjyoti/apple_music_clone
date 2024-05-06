@@ -2,64 +2,31 @@ import React, { useState } from 'react';
 import './styleHome.css';
 // import AppleMusicLogo from "../icons/Apple_music_logo.jpg";
 import LogoIcon from '../icons/logoIcon';
-import PlayIcon from '../icons/playIcon';
-import Browse from '../icons/browseIcon'
-import Radio from '../icons/radioIcon'
-import MusicIcon from '../icons/musicIcon'
 import Image from '../icons/large.webp'
 // import searchIcon from '../icons/searchIcon';
-import TextComponent from '../components/TextComponent';
-import Signup from './Signup';
+// import Signup from './Signup';
+
 import Popup from '../components/Popup';
-import Subscription from './Subscription';
 import Signin from './Signin';
+
+
 
 const Home = () => {
   // const [showSignUp, setShowSignUp] = useState(false);
-
   const [showSignIn, setShowSignIn] = useState(false);
 
-  const [showSubscribe, setShowSubscribe] =useState("");
 
   return (
-    <div className='mainContainer'>
-        {/* Left sidebar */}
-        <div className='leftSidebarContainer'>
-          <div className='sidebarContainer'>
-            <div>
-                {/* <img className='logoIcon' src={AppleMusicLogo} alt='Logo'/> */}
-                <LogoIcon/>
-            </div>
-            <div>
-              <input type='search' placeholder='Search'/>
-            </div>
-            <div className='iconDiv'>
-              <TextComponent icon={<PlayIcon />} text="Listen Now"/>
-              <TextComponent icon={<Browse />} text="Browse"/>
-              <TextComponent icon={<Radio />} text="Radio"/>
-            </div>
-          </div>
-              {/* Horizontal line */}
-              <hr />
-            <div className='sidebarContainer'>
-              <TextComponent icon={<MusicIcon />} text="Open in Music"/>
-            </div>
-        </div>
-
-        {/* Right side Hero Section */}
+    <div>
         <div className='rightSideContainer'>
-          <div className='topBar'>
-            <button className='subscribeButton' onClick={()=> {
-              setShowSubscribe(true)
-            }}>Subscribe</button>
-          </div>
+          
           <div className='heroSection'>
             <div>
               <LogoIcon />
               {/* <img className='logoIcon' src={AppleMusicLogo} alt='Logo'/> */}
             </div>
-            <div>
-              <span className='headline'>Discover new music everyday.</span>
+            <div  className='headline'>
+              Discover new music every day.
             </div>
             <div className='notes'>
               <span>Get playlists and albums inspired by the artists and</span>
@@ -75,14 +42,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
-        <Popup show={showSubscribe} 
-        onClose={()=>{
-          setShowSubscribe(false) // if this onClose is not passed it will not work for the second time
-        }}>
-          <Subscription />
-        </Popup>
-
         {/* <Popup show={showSignUp}  */}
         <Popup show={showSignIn} 
         onClose={()=>{
@@ -93,6 +52,8 @@ const Home = () => {
           {/* <Signup /> */}
           <Signin />
         </Popup>
+        
+        
     </div>
   )
 }
